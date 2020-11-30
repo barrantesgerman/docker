@@ -40,7 +40,29 @@ $ docker run -it --rm mysql mysql -hsome-mysql-host -usome-mysql-user -p
 
 ## Docker Compose
 
-### File
+### Examples
+
+Adminer
+
+```yaml
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080 
+```
+
+Spring Boot
 
 ```yaml
 version: '3.7'
