@@ -1,0 +1,9 @@
+# Jellyfin
+/Jellyfin/cache
+/Jellyfin/config
+/Jellyfin/media
+
+# Plex
+/Plex/config
+/Plex/data
+/Plex/temp
