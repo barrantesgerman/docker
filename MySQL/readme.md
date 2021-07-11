@@ -29,13 +29,13 @@ $ docker run -d -p 3306:3306 -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PAS
 Container
 
 ```bash
-$ docker exec -it mysql-db mysql -p
+$ docker exec -it --rm mysql-db mysql -p
 ```
 
 External
 
 ```bash
-$ docker run -it --rm mysql mysql -hsome-mysql-host -usome-mysql-user -p
+$ docker run -it --rm mysql-db mysql -hsome-mysql-host -usome-mysql-user -p
 ```
 
 ## Docker Compose
@@ -100,6 +100,5 @@ networks:
 
 ## Links
 
-https://hub.docker.com/_/mysql
-
-https://platzi.com/tutoriales/1432-docker/3268-como-crear-un-contenedor-con-docker-mysql-y-persistir-la-informacion/
+* [MySQL Docker](https://hub.docker.com/_/mysql)
+* [Platzi](https://platzi.com/tutoriales/1432-docker/3268-como-crear-un-contenedor-con-docker-mysql-y-persistir-la-informacion/)

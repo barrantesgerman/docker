@@ -52,6 +52,5 @@ $ docker run --rm \
 
 ## Links
 
-[Jekyll Site](https://jekyllrb.com/)
-
-[Jekyll Docker Site](https://github.com/envygeeks/jekyll-docker/blob/master/README.md)
+* [Jekyll Site](https://jekyllrb.com/)
+* [Jekyll Docker Site](https://github.com/envygeeks/jekyll-docker/blob/master/README.md)
