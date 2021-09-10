@@ -1,12 +1,10 @@
- 
-
 # SonaQube
 
 ## Docker
 
 ### Pull
 
-```bash
+```shell
 $ docker pull sonarqube
 ```
 
@@ -14,13 +12,13 @@ $ docker pull sonarqube
 
 Basic
 
-```bash
+```shell
 $ docker run -d -p 9000:9000 --name sonarqube-name sonarqube:tag
 ```
 
 Config
 
-```bash
+```shell
 $ docker volume create --name sonarqube_data
 $ docker volume create --name sonarqube_logs
 $ docker volume create --name sonarqube_extensions

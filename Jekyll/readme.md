@@ -1,12 +1,10 @@
- 
-
 # Jekyll
 
 ## Docker
 
 ### Pull
 
-```bash
+```shell
 $ docker pull jekyll/jekyll:3.8
 ```
 
@@ -14,31 +12,31 @@ $ docker pull jekyll/jekyll:3.8
 
 Create a new Jekyll site at `./blog`
 
-```bash
+```shell
 $ docker run --rm -v $PWD:/srv/jekyll -it jekyll/jekyll:3.8 jekyll new blog
 ```
 
 Change into your new directory
 
-```bash
+```shell
 $ cd blog
 ```
 
 Build the site
 
-```bash
+```shell
 $ docker run --rm -v $PWD:/srv/jekyll -it jekyll/jekyll:3.8 jekyll build
 ```
 
 Make it available on a local server
 
-```bash
+```shell
 $ docker run --rm -v $PWD:/srv/jekyll -p 4000:4000 -it jekyll/jekyll:3.8 jekyll serve
 ```
 
 Pass the `--livereload` option to `serve` to automatically refresh the page with each change you make to the source files
 
-```bash
+```shell
 $ docker run --rm \
 	-v $PWD:/srv/jekyll \
 	-p 4000:4000 \

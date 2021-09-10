@@ -1,12 +1,10 @@
- 
-
 # MariaDB
 
 ## Docker
 
 ### Pull
 
-```bash
+```shell
 $ docker pull mariadb
 ```
 
@@ -14,13 +12,13 @@ $ docker pull mariadb
 
 Basic
 
-```bash
+```shell
 $ docker run -d -p 3306:3306 -e MARIADB_ROOT_PASSWORD=secret --name maria-db maria:tag
 ```
 
 Config
 
-```bash
+```shell
 $ docker run -d -p 3306:3306 -v /my/own/datadir:/var/lib/mysql -e MARIADB_ROOT_PASSWORD=secret -e MARIADB_DATABASE=mydb -e MARIADB_USER=user -e MARIADB_PASSWORD=pass --name maria-db mariadb:tag
 ```
 
@@ -28,13 +26,13 @@ $ docker run -d -p 3306:3306 -v /my/own/datadir:/var/lib/mysql -e MARIADB_ROOT_P
 
 Container
 
-```bash
+```shell
 $ docker exec -it --rm maria-db mysql -p
 ```
 
 External
 
-```bash
+```shell
 $ docker run -it --rm maria-db mysql -hsome-mariadb-host -usome-mariadb-user -p
 ```
 

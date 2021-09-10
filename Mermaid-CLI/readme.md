@@ -1,12 +1,10 @@
- 
-
 # Mermaid-CLI
 
 ## Docker
 
 ### Pull
 
-```bash
+```shell
 $ docker pull minlag/mermaid-cli
 ```
 
@@ -14,25 +12,25 @@ $ docker pull minlag/mermaid-cli
 
 Basic
 
-```bash
+```shell
 $ docker run --rm -it -v /path/to/diagrams:/data minlag/mermaid-cli -i /data/diagram.mmd
 ```
 
 SVG
 
-```bash
+```shell
 $ docker run --rm -it -v /path/to/diagrams:/data minlag/mermaid-cli -i /data/diagram.mmd -o /data/diagram.svg
 ```
 
 PDF
 
-```bash
+```shell
 $ docker run --rm -it -v /path/to/diagrams:/data minlag/mermaid-cli -i /data/diagram.mmd -o /data/diagram.pdf
 ```
 
 PNG
 
-```bash
+```shell
 $ docker run --rm -it -v /path/to/diagrams:/data minlag/mermaid-cli -i /data/diagram.mmd -o /data/diagram.png -t dark -b transparent
 ```
 
