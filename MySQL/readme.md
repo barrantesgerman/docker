@@ -1,12 +1,10 @@
- 
-
 # MySQL
 
 ## Docker
 
 ### Pull
 
-```bash
+```shell
 $ docker pull mysql
 ```
 
@@ -14,13 +12,13 @@ $ docker pull mysql
 
 Basic
 
-```bash
+```shell
 $ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret --name mysql-db mysql:tag
 ```
 
 Config
 
-```bash
+```shell
 $ docker run -d -p 3306:3306 -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=mydb -e MYSQL_USER=user -e MYSQL_PASSWORD=pass --name mysql-db mysql:tag
 ```
 
@@ -28,13 +26,13 @@ $ docker run -d -p 3306:3306 -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PAS
 
 Container
 
-```bash
+```shell
 $ docker exec -it --rm mysql-db mysql -p
 ```
 
 External
 
-```bash
+```shell
 $ docker run -it --rm mysql-db mysql -hsome-mysql-host -usome-mysql-user -p
 ```
 
