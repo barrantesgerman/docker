@@ -1,0 +1,31 @@
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    #container_name: plex
+    network_mode: host #recomendado
+    #network_mode: bridge
+    deploy:
+      resources:
+        reservations:
+          memory: "256M"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Costa_Rica
+      - VERSION=docker
+      - PLEX_CLAIM= #optional
+    #ports:
+    #  - "32400:32400" #requerido
+    #  - "1900:1900/udp"
+    #  - "5353:5353/udp"
+    #  - "8324:8324"
+    #  - "32410:32410/udp"
+    #  - "32412:32412/udp"
+    #  - "32413:32413/udp"
+    #  - "32414:32414/udp"
+    #  - "32469:32469"
+    volumes:
+      - /data/plex/config:/config
+      - /data/media:/media
+    restart: unless-stopped
+
